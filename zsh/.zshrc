@@ -46,6 +46,8 @@ alias sonmachine1="ssh slave-machine-1@192.168.0.13 'arecord -f S16_LE -r 36000'
 alias cls="clear"
 # Leva para raiz - go to root
 alias gtr="cd ~/"
+# Copia qualquer saida para area de transferencia   | Exemplo de uso
+alias clipboard="xclip -selection clipboard" #      | pwd | clipboard
 
 # Desativa mensagem de confimação para fechar o terminal
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
