@@ -20,6 +20,10 @@ ZSH_THEME="agnoster"
 
 plugins=(git)
 
+# Carrega configuracao do git status
+source ~/dotfiles/git/git_status.sh
+
+
 source $ZSH/oh-my-zsh.sh
 
 # Carrega o esquema de cores do termianl
