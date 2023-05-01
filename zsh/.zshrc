@@ -44,6 +44,8 @@ alias entermachine1="ssh -X slave-machine-1@192.168.0.13"
 alias sonmachine1="ssh slave-machine-1@192.168.0.13 'arecord -f S16_LE -r 36000' | aplay"
 # Limpa tela
 alias cls="clear"
+# Leva para raiz - go to root
+alias gtr="cd ~/"
 
 # Desativa mensagem de confimação para fechar o terminal
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
