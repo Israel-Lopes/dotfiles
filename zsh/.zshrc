@@ -22,6 +22,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Carrega o esquema de cores do termianl
+dconf load /org/gnome/terminal/legacy/profiles:/ < ~/dotfiles/terminal-config/profiles_backup.txt
+
 # Muted sound on/off
 alias sound_off="amixer -D pulse sset Master mute"
 alias sound_on="amixer -D pulse sset Master unmute"
