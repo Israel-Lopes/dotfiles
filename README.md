@@ -10,18 +10,16 @@ OBS: Todos os arquivos de configuração devem fica dentro da pasta /dotfiles
 
 ## Configuração
 
-Para configurar os dotfiles, bastar por script dentro de .bashrc
+Para configurar o dotfiles, basta executar os comandos abaixo.
+Lenbrando que os direotrios para criar o link dos arquivos deve existir, caso contrario
+avera erro.
+
+O comando ``ln -s`` cria um link simbolico do arquivo, dessa forma e possivel organizar arquivos
+de configuracão em outros diretorios
 
 ```
-# Configuracao dos imports para centralizar configuracoes
-export XDG_CONFIG_HOME="$HOME/dotfiles/nvim/init.vim"
-export TMUX_CONFIG="$HOME/dotfiles/tmux/tmux.conf"
+ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 ```
 
-Depois dentro do ~/.zshrc pode apagar todo conteudo do arquivo. Agora basta chamar
-o arquivo ~/dotfiles/zsh/.zshrc dentro de ~/.zshrc dessa forma:
-
-``source ~/dotfiles/zsh/.zshrc``
-
-Depois de todas configuracoes, todos os arquivos podem ser confurados em uma mesma pasta,
-facilitando assim a manutenção e controler das configuracoes.

@@ -39,7 +39,7 @@ gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 
 
 
-
+export TMUX_CONFIG="$HOME/dotfiles/tmux/tmux.conf"
 
 if [[ -z "${TMUX}" ]]; then
     tmux attach-session -t default || tmux new-session -s default
