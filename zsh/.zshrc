@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # color autput
 export CLICOLOR=1
 
@@ -21,6 +28,7 @@ ZSH_THEME="agnoster"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Carrega o esquema de cores do termianl
 dconf load /org/gnome/terminal/legacy/profiles:/ < ~/dotfiles/terminal-config/profiles_backup.txt
@@ -40,11 +48,9 @@ alias cls="clear"
 # Desativa mensagem de confimação para fechar o terminal
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh
 
-
-export TMUX_CONFIG="$HOME/dotfiles/tmux/tmux.conf"
-
-if [[ -z "${TMUX}" ]]; then
-    tmux attach-session -t default || tmux new-session -s default
-fi
-
+#if [[ -z "${TMUX}" ]]; then
+#    tmux attach-session -t default || tmux new-session -s default
+#fi

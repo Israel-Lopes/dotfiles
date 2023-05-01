@@ -19,9 +19,18 @@ de configuracão em outros diretorios
 
 ```
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+ln -s ~/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
 ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 ```
+
+## Customização do zshrc com powerlevel10k
+
+Caso nao tenha instalado em sua maquina, basta baixar e seguir a documentação abaixo.
+
+![site_powerlevel10k](https://github.com/romkatv/powerlevel10k.git)
+
+Essa configuração tambem e criando um link simbolico dela com nome ``.p10k.zsh``.
 
 ## Thema de cores do terminal
 
