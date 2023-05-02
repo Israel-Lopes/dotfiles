@@ -28,6 +28,7 @@ ZSH_THEME="agnoster"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+# Carrega o modulo de complemento de thema
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Carrega o esquema de cores do termianl
@@ -48,6 +49,8 @@ alias cls="clear"
 alias gtr="cd ~/"
 # Copia qualquer saida para area de transferencia   | Exemplo de uso
 alias clipboard="xclip -selection clipboard" #      | pwd | clipboard
+# History do git log estilizado
+alias ghistory="~/dotfiles/git/ghistory.sh"
 
 # Desativa mensagem de confimação para fechar o terminal
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
