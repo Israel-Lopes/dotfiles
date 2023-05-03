@@ -26,7 +26,26 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'Yggdroot/indentLine'
 call plug#end()
 
-
+" "<BS>"            Backspace
+" "<Tab>"           Tab
+" "<CR>"            Enter
+" "<Enter>"         Enter
+" "<Return>"        Enter
+" "<Esc>"           Escape
+" "<Space>"         Space
+" "<Up>"            Up arrow
+" "<Down>"          Down arrow
+" "<Left>"          Left arrow
+" "<Right>"         Right arrow
+" "<F1> - <F12>"    Function keys 1 to 12
+" "#1, #2..#9,#0"   Function keys F1 to F9, F10
+" "<Insert>"        Insert
+" "<Del>"           Delete
+" "<Home>"          Home
+" "<End>"           End
+" "<PageUp>"        Page-Up
+" "<PageDown>"      Page-Down
+" "<bar>"           the '|' character, which otherwise needs to be escaped '\|'
 
 " "Global Sets """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on                     " Enable syntax highlight
@@ -79,22 +98,16 @@ nnoremap <C-[> :bprev<CR>
 
 " Seleciona todo texto CTRL+a
 nnoremap <C-a> ggVG
-
-"SAVE  CTRL+s
+"SAVE  "CTRL+s"
 nnoremap  <c-s> :w<cr>
-
-"QUIT CTRL+q
+"QUIT "CTRL+q"
 nnoremap <c-x> :q<cr>
-
-" Desfaz alteracoes CTRL+z
+" Desfaz alteracoes "CTRL+z"
 nnoremap <C-z> :undo<CR>
-
-
 
 " # TERMINAL #
 " Define um atalho para fechar a janela do terminal
 tnoremap <C-d> <C-\><C-n>:q!<CR>
-
 " Abre novo terminal no modo insert
 function! OpenTerminal()
   " cria nova janela abaixo e abre o terminal
@@ -102,19 +115,17 @@ function! OpenTerminal()
   " entra no modo de insert
   startinsert
 endfunction
-
-" mapeia para tecla de atalho F5
+" mapeia para tecla de atalho "F5"
 nnoremap <silent> <F5> :call OpenTerminal()<CR>
-" mapeia sair de insercao para tecla de atalho CTRL+\+n
+" mapeia sair de insercao para tecla de atalho "CTRL+\+n"
 tnoremap <Esc>[17~ <C-\><C-n>gv
 
 
 
 
-
-"############################################
-"################### CONFIGURACAO DOS PLUGINS
-"############################################
+"##########################################################################################################################
+"############################################# CONFIGURACAO DOS PLUGINS ###################################################
+"##########################################################################################################################
 
 
 
@@ -155,8 +166,6 @@ let NERDTreeShowLineNumbers=1
 let g:NERDTreeMapJumpNextSibling = 'Ê'
 let g:NERDTreeMapJumpPrevSibling = 'Ë'
 let g:NERDTreeWinSize=50
-" autocmd VimEnter * NERDTree autocmd VimEnter * set winfixwidth
-" now using A mapping => maximizes/minimizes the explorer window
 
 
 
@@ -213,15 +222,4 @@ let g:ale_linters = {
 let g:ale_java_checkstyle_config = '/path/to/checkstyle.xml'
 let g:ale_java_javac_options = '-Xlint:all -source 11'
 
-
-
-
-
-" Cria metodos getters e setters
-function! GenerateGetSet()
-    let current_file = expand('%:p')
-    execute '!~/.config/nvim/plugin-shell/GenerateGetSet.sh ' . current_file
-endfunction
-
-command! GenerateGetSet :call GenerateGetSet()
 
