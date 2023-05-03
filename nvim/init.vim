@@ -120,6 +120,14 @@ nnoremap <silent> <F5> :call OpenTerminal()<CR>
 " mapeia sair de insercao para tecla de atalho "CTRL+\+n"
 tnoremap <Esc>[17~ <C-\><C-n>gv
 
+" Destaca a cor da linha em que cursor se encontra
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+augroup END         " verde escuro
+hi CursorLine guibg=#001c00
+
+
 
 
 
