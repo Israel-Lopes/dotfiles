@@ -47,6 +47,8 @@ call plug#end()
 " "<PageDown>"      Page-Down
 " "<bar>"           the '|' character, which otherwise needs to be escaped '\|'
 
+
+
 " "Global Sets """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on                     " Enable syntax highlight
 set nu                        " Enable line numbers
@@ -76,6 +78,7 @@ set so=999                    " Manter cursor de texto no meio
 set expandtab                 "
 set termguicolors             "
 set encoding=UTF-8            " Padrao UTF-8
+set autowriteall              " Salva file automatico
 filetype on                   " Detect and set the filetype option and trigger the FileType Event
 filetype plugin on            " Load the plugin file for the file type, if any
 filetype indent on            " Load the indent file for the file type, if any
@@ -90,7 +93,6 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 set shell=/bin/zsh
 " Carregar o arquivo .zshrc. Para executar comandos deve se ter :!<comando>
 silent !source ~/.zshrc
-
 
 " Navegação entre arquivos abertos, buffers [ "CTRL+]" e "CTRL+[" ]
 nnoremap <C-]> :bnext<CR>
