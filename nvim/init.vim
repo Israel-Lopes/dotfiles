@@ -26,6 +26,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'Yggdroot/indentLine'
 call plug#end()
 
+
+
 " "<BS>"            Backspace
 " "<Tab>"           Tab
 " "<CR>"            Enter
@@ -54,6 +56,7 @@ syntax on                     " Enable syntax highlight
 set nu                        " Enable line numbers
 set tabstop=4                 " Show existing tab with 4 spaces width
 set softtabstop=4             " Show existing tab with 4 spaces width
+set expandtab                 " Converts tabs to spaces
 set shiftwidth=4              " When indenting with '>', use 4 spaces width
 set expandtab                 " On pressing tab, insert 4 spaces
 set smarttab                  " insert tabs on the start of a line according to shiftwidth
@@ -126,8 +129,8 @@ tnoremap <Esc>[17~ <C-\><C-n>gv
 augroup CursorLine
   au!
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-augroup END         " verde escuro
-hi CursorLine guibg=#001c00
+augroup END         " roxo escuro 
+hi CursorLine guibg=#100010
 
 
 
@@ -231,5 +234,3 @@ let g:ale_linters = {
      \ }
 let g:ale_java_checkstyle_config = '/path/to/checkstyle.xml'
 let g:ale_java_javac_options = '-Xlint:all -source 11'
-
-
