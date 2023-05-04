@@ -51,6 +51,8 @@ alias gtr="cd ~/"
 alias clipboard="xclip -selection clipboard" #      | pwd | clipboard
 # History do git log estilizado
 alias ghistory="~/dotfiles/git/ghistory.sh"
+# Comando drag para arrastar arquivos e pastas
+alias drag="~/dotfiles/zsh/drag/drag.sh"
 
 # Desativa mensagem de confimação para fechar o terminal
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
