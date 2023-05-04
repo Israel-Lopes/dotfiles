@@ -53,6 +53,8 @@ alias clipboard="xclip -selection clipboard" #      | pwd | clipboard
 alias ghistory="~/dotfiles/git/ghistory.sh"
 # Comando drag para arrastar arquivos e pastas
 alias drag="~/dotfiles/zsh/drag/drag.sh"
+# Retorna grep colorido
+alias grepr="grep --color=auto"
 
 # Desativa mensagem de confimação para fechar o terminal
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
