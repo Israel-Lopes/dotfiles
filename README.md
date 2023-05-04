@@ -44,3 +44,11 @@ Com isso ele ira carregar o esquema de cores
 Caso você queria exporta suas configuracoes basta fazer:
 
 ``dconf dump /org/gnome/terminal/legacy/profiles:/ > profiles_backup.txt``
+
+## Configurando git  GCP
+
+O git gcp e uma abreviação de git add, commit e push. Ele ja automatiza a tarefa de
+    subir alteçoes do codigo.
+Para configuralo basta fazer setar em git config a seguinte alias:
+
+´´``````` git config --global alias.gcp '!~/dotfiles/git/git-commit-push.sh'´´
