@@ -55,6 +55,8 @@ alias ghistory="~/dotfiles/git/ghistory.sh"
 alias drag="~/dotfiles/zsh/drag/drag.sh"
 # Retorna grep colorido
 alias grepr="grep --color=auto"
+# Para printar a tela
+alias screenshot="gnome-screenshot -a"
 
 # Desativa mensagem de confimação para fechar o terminal
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
