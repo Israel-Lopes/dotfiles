@@ -117,7 +117,8 @@ tnoremap <C-d> <C-\><C-n>:q!<CR>
 " Abre novo terminal no modo insert
 function! OpenTerminal()
   " cria nova janela abaixo e abre o terminal
-  botright 20split term://bash
+  botright 20split term://tmux
+  "botright 20split term://bash
   " entra no modo de insert
   startinsert
 endfunction
