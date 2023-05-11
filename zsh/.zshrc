@@ -58,6 +58,10 @@ alias grepr="grep --color=auto"
 # Para printar a tela
 alias screenshot="gnome-screenshot -a"
 
+# Para sobrescrever aws-cli
+source /home/oem/Workspace/myenv/venv/bin/activate
+alias aws="aws --endpoint-url=http://localhost:4566"
+
 # Desativa mensagem de confimação para fechar o terminal
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 
