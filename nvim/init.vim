@@ -127,6 +127,23 @@ nnoremap <silent> <F5> :call OpenTerminal()<CR>
 " mapeia sair de insercao para tecla de atalho "CTRL+\+n"
 tnoremap <Esc>[17~ <C-\><C-n>gv
 
+
+" # GIT HISTORY #
+" Define um atalho para fechar a janela do git history 
+tnoremap <C-d> <C-\><C-n>:q!<CR>
+" Abre novo terminal no modo insert
+function! OpenGitHistory()
+  " cria nova janela abaixo e abre o terminal
+  botright 90vsplit term://git log --graph --abbrev-commit --decorate 
+  " entra no modo de insert
+  startinsert
+endfunction
+" mapeia para tecla de atalho "F6"
+nnoremap <silent> <F6> :call OpenGitHistory()<CR>
+" mapeia sair de insercao para tecla de atalho "CTRL+\+n"
+tnoremap <Esc>[17~ <C-\><C-n>gv
+
+
 " Destaca a cor da linha em que cursor se encontra
 augroup CursorLine
   au!
